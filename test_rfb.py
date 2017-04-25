@@ -2,10 +2,10 @@ import sys, random
 from rfb_class import RFB
 
 def c(c):
-    print(r.get_address(c) + " connected!")
+    print("Client with address {} connected!".format(r.get_address(c)))
     
 def d(c):
-    print(r.get_address(c) + " disconnected!")
+    print("Client with address {} disconnected!".format(r.get_address(c)))
 
 def k(c, pressed, key):
     if (pressed):
@@ -13,7 +13,7 @@ def k(c, pressed, key):
             r.fill(random.randint(0, 255))
             r.rect(int(r.width / 2) - int(r.height / 4), int(r.height / 4), int(r.height / 2), int(r.height / 2), c)
         else:
-            print("Special key: " + str(key))
+            print("Special key: {}".format(str(key)))
 def m(c, pressed, xy, change):
     if(pressed):
         if (pressed and change):
